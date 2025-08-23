@@ -1,0 +1,28 @@
+.text-menu {
+    color: white;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+}
+
+.navbar-brand {
+    color: red;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+.buttonstart {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}

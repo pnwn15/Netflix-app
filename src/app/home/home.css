@@ -1,0 +1,79 @@
+.carousel {
+    height: 30%;
+}
+
+.fixed-slide {
+    height: 750px;
+    /* กำหนดสูงเท่ากันทุกสไลด์ */
+    object-fit: cover;
+    /* ตัดภาพให้เต็มโดยไม่เสียสัดส่วน */
+}
+
+.carousel-caption {
+    top: 50%;
+    /* กึ่งกลางแนวตั้ง */
+    left: 50%;
+    /* กึ่งกลางแนวนอน */
+    transform: translate(-50%, -50%);
+    /* ขยับให้ตรงกลางจริง ๆ */
+    text-align: center;
+    /* จัดข้อความตรงกลาง */
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.form-control {
+    padding: 15px;
+    border-radius: 0%;
+}
+
+.buttonstart {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.transparent-input {
+    background-color: transparent;
+    /* ทำให้พื้นหลังโปร่งใส */
+    color: white;
+    /* สีตัวอักษรเป็นขาว */
+    border: 1px solid white;
+    /* เส้นขอบสีขาว */
+}
+
+.transparent-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    /* สี placeholder โปร่งเล็กน้อย */
+}
+
+.imagegg{
+    height: 50px;
+}
+
+@media (max-width: 576px) {
+
+    .carousel-caption {
+        width: 80%;
+    }
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .buttonstart {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .transparent-input {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
