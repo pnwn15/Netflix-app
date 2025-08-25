@@ -1,0 +1,17 @@
+.icon-card {
+    display: flex;
+    justify-content: end;
+    
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.card {
+  /* background: linear-gradient(180deg, #282036 0%, #000000 100%); */
+  background-color: #20111E;
+}

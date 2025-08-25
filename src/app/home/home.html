@@ -2,56 +2,147 @@
     <source src="/Rock1.mp3" type="audio/mpeg">
 </audio> -->
 <section>
-    <div class="carousel">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators ">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner bg-black">
-                <div class="carousel-item" *ngFor="let img of carouselImages; let i = index"
-                    [ngClass]="{'active': i === 0}">
-                    <img [src]="img" class="d-block w-100 fixed-slide" alt="...">
-                    <div class="carousel-caption d-block ">
-                        <h1>Unlimited movies, TV shows, and more </h1>
-                        <p class="fw-bold fs-5 mb-4">Starts at THB 99. Cancel anytime.</p>
-                        <p>Ready to watch? Enter your email to create or restart your membership.</p>
-                        <div class="input-group mt-3">
-                            <input type="text" class="form-control me-2 transparent-input" placeholder="Email Address"
-                                aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn buttonstart fs-3" type="button" id="button-addon2">Get Started +</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev d-none d-md-block" type="button"
-                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+  <div class="carousel">
+    <div
+  id="carouselExampleIndicators"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+  </div>
+
+  <div class="carousel-inner bg-black">
+    <div
+      class="carousel-item"
+      *ngFor="let media of carouselImages; let i = index"
+      [ngClass]="{ active: i === 0 }"
+    >
+      <video
+        class="d-block w-100 fixed-slide"
+        [src]="media"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+
+      <div class="carousel-caption d-block">
+        <h1>Unlimited movies, TV shows, and more</h1>
+        <p class="fw-bold fs-5 mb-4">Starts at THB 99. Cancel anytime.</p>
+        <div>
+          <p>
+            Ready to watch? Enter your email to create or restart your membership.
+          </p>
+          <div class="input-group mt-3">
+            <input
+              type="text"
+              class="form-control me-2 transparent-input"
+              placeholder="Email Address"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn buttonstart fs-3"
+              type="button"
+              id="button-addon2"
+            >
+              Get Started +
             </button>
-            <button class="carousel-control-next d-none d-md-block" type="button"
-                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="bg-black" style="height: 1500px;">
-        <img src="/ss3.png" alt="" width="100%" class="imagegg">
-        <div class="container-md ">
-            <div class="row ">
-                <div class="col-12">
-                    <h2 class="text-white">Trending Now</h2>
+  </div>
+
+  <button
+    class="carousel-control-prev d-none d-md-block"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next d-none d-md-block"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  </div>
+  <div class="bg-black " style="height: 100%;">
+    <img src="/ss3.png" alt="" width="100%" class="imagegg" />
+    <div class="container-md mt-3" style="max-width: 1200px">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-white">Trending Now</h2>
+        </div>
+        <div class="col-12 mt-3">
+          <app-slidebar></app-slidebar>
+        </div>
+      </div>
+      <div class="roza">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-white">More Reasons to Join</h2>
+          </div>
+          <div class="col-12 mt-3">
+            <app-card></app-card>
+          </div>
+        </div>
+      </div>
+      <div class="roza">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-white">Frequently Asked Questions</h2>
+          </div>
+          <div class="col-12 mt-3">
+            <div class="accordion bg-black text-white" id="accordionExample">
+              <div
+                class="accordion-item"
+                *ngFor="let item of accordionItems; let i = index"
+              >
+                <h2 class="accordion-header" [id]="'heading' + i">
+                  <button
+                    class="accordion-button"
+                    [class.collapsed]="i !== 0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    [attr.data-bs-target]="'#collapse' + i"
+                    [attr.aria-expanded]="i === 0 ? 'true' : 'false'"
+                    [attr.aria-controls]="'collapse' + i"
+                  >
+                    <h2>{{ item.title }}</h2>
+                  </button>
+                </h2>
+                <div
+                  [id]="'collapse' + i"
+                  class="accordion-collapse collapse"
+                  [class.show]="i === 0"
+                  [attr.aria-labelledby]="'heading' + i"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                   <h3>{{ item.content }}</h3> 
+                  </div>
                 </div>
-                <div class="col-12">
-                    
-                    <app-slidebar></app-slidebar>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>

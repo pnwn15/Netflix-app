@@ -1,0 +1,29 @@
+h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.form-control {
+  padding: 15px;
+  border-radius: 0%;
+}
+
+.buttonstart {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+.transparent-input {
+  background-color: transparent;
+  /* ทำให้พื้นหลังโปร่งใส */
+  color: white;
+  /* สีตัวอักษรเป็นขาว */
+  border: 1px solid white;
+  /* เส้นขอบสีขาว */
+}
+
+.transparent-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  /* สี placeholder โปร่งเล็กน้อย */
+}
