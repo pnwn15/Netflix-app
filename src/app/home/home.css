@@ -25,15 +25,17 @@ h1 {
   font-weight: 800;
 }
 
-.form-control {
-  padding: 15px;
-  border-radius: 0%;
-}
+
 
 .buttonstart {
   background-color: red;
   color: white;
   font-weight: bold;
+}
+
+.form-control {
+  padding: 15px;
+  border-radius: 0%;
 }
 
 .transparent-input {
