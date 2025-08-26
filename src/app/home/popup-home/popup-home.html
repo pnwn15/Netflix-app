@@ -1,0 +1,28 @@
+<div class="popup-container">
+  <div class="image-section">
+    <img [src]="data.imageUrl" alt="Card Image" class="imagevideo" />
+          <button mat-button mat-dialog-close class="close-button fb-2">X</button>
+    <div class="image-overlay">
+      <div class="content-wrapper">
+        <h1 class="title">{{ data.title }}</h1>
+        <div class="tags">
+          <span *ngFor="let tag of data.buttonaction" class="tag">
+            {{ tag }}
+          </span>
+        </div>
+
+        <p class="detail">
+          {{ data.detail }}
+        </p>
+        <button mat-raised-button color="warn" class="get-started-btn">
+          Get Started
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
